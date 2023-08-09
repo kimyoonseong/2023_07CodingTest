@@ -1,24 +1,35 @@
 #include<iostream>
+#include<algorithm>
 using namespace std;
 
-
+int a[60],b[60];
 int main(){
 	//freopen("input.txt", "rt", stdin);
-	int n,i,j,flag, cnt=0;
-	cin>>n;
-	for(i=2; i<=n; i++){
-		flag =1;
-		for(j=2; j*j<=i; j++){// 제곱근 까지만 하면 된다 
-			
-			if(i%j==0) {
-				flag=0;
-				break; 
-			}
-			
+	char str[100];
+	int i;
+	scanf("%s", &str);
+	for(i=0; str[i]!='\0'; i++){
+		if(str[i]>=65 && str[i]<=90){
+			a[str[i]-64]++;
 		}
-		if(flag==1) cnt++;
-	}
-	cout<< cnt;
+		else a[str[i]-70]++;
 		
+	}
+	scanf("%s", &str);
+	for(i=0; str[i]!='\0'; i++){
+		if(str[i]>=65 && str[i]<=90){
+			b[str[i]-64]++;
+		}
+		else b[str[i]-70]++;
+		
+	}
+	for(i=1; i<=52; i++){
+	
+		if(a[i]!=b[i]){
+			cout<<"NO";
+			exit(0);	//프로그램 종료
+		}
+	}
+	cout<<"YES";
 	return 0;
 }
