@@ -29,8 +29,8 @@ vector<string> split1(string input, string delimiter){
 	return ret;
 }
 int main(){
-	//string a="love is pain";
-	//cout<< a.substr(5,2);
+	string b="love is pain";
+	cout<< b.substr(5,2);
 	//split±â´É
 	string s="b877006±èÀ±¼º °æ±âµµ ¿ëÀÎ½Ã ±âÈï±¸",d=" ";
 	vector<string> a=split1(s,d);
