@@ -19,7 +19,7 @@ int main(){
 		}
 		if(sum==100) break;
 		
-	}while (next_permutation(v.begin(),v.begin()+9));
+	}while (next_permutation(v.begin(),v.end()));
 
 	for(int i=0; i<7; i++){
 		cout<<v[i]<<"\n";
